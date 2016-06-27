@@ -17,8 +17,9 @@ $(if $(findstring $(space),$(TOPDIR)),$(error ERROR: The path to the OpenWrt dir
 
 world:
 
+$(warning :caroid ---> world)
 include $(TOPDIR)/include/host.mk
-
+$(warning :caroid ---> host.mk)
 ifneq ($(OPENWRT_BUILD),1)
   _SINGLE=export MAKEFLAGS=$(space);
 
